@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: angerard <angerard@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 11:44:58 by angerard          #+#    #+#             */
-/*   Updated: 2025/02/06 14:53:29 by angerard         ###   ########.fr       */
+/*   Created: 2025/02/07 10:39:36 by angerard          #+#    #+#             */
+/*   Updated: 2025/02/07 11:22:24 by angerard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
+
 #include <iostream>
-#include <cctype>
 
-int main(int ac, char *av[])
+class Contact
 {
-    if (ac == 1)
-    {
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-        return 0;
-    }
+private:
+    std::string fst_name;
+    std::string lst_name;
+    std::string nickname;
+    std::string phone_nbr;
+    std::string darkest_secret;
 
-    for (int i = 1; i < ac; i++)
-    {
-        char *str = av[i];
-        for (int j = 0; str[j] != '\0'; j++)
-        {
-            std::cout << (char)std::toupper(str[j]);
-        }
-    }
-    // adds \n
-    std::cout << std::endl;
-    return 0;
-}
+public:
+    void setContact();
+    void displayContact() const;
+    void displaySummary(int index) const;
+};
+
+#endif
