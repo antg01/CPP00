@@ -6,22 +6,25 @@
 /*   By: angerard <angerard@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 10:39:54 by angerard          #+#    #+#             */
-/*   Updated: 2025/02/07 10:59:02 by angerard         ###   ########.fr       */
+/*   Updated: 2025/02/07 17:44:34 by angerard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() : contact_count(0), oldest_index(0) {}
+PhoneBook::PhoneBook() : contact_count(0) {}
 
 void PhoneBook::addContact()
 {
-    if (contact_count < 8) {
+    if (contact_count < 8)
+    {
+        contacts[contact_count].setContact();
         contact_count++;
-    } else {
-        oldest_index = (oldest_index + 1) % 8;
     }
-    contacts[(contact_count - 1) % 8].setContact();
+    else
+    {
+        contacts[0].setContact();
+    }
 }
 
 void PhoneBook::searchContact() const

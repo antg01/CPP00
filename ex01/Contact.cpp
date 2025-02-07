@@ -6,7 +6,7 @@
 /*   By: angerard <angerard@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 10:40:07 by angerard          #+#    #+#             */
-/*   Updated: 2025/02/07 11:13:14 by angerard         ###   ########.fr       */
+/*   Updated: 2025/02/07 17:34:41 by angerard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ void Contact::displayContact() const
 void Contact::displaySummary(int index) const
 {
     std::cout << std::setw(10) << index << "|"
-            << std::setw(10) << (fst_name.length() < 9 ? fst_name.substr(0, 9) + "." : fst_name) << "|"
-            << std::setw(10) << (lst_name.length() < 9 ? lst_name.substr(0, 9) + "." : lst_name) << "|"
-            << std::setw(10) << (nickname.length() < 9 ? nickname.substr(0, 9) + "." : nickname) << std::endl;
+              << std::setw(10) << (fst_name.length() > 10 ? fst_name.substr(0,9) + "." : fst_name) << "|"
+              << std::setw(10) << (lst_name.length() > 10 ? lst_name.substr(0,9) + "." : lst_name) << "|"
+              << std::setw(10) << (nickname.length() > 10 ? nickname.substr(0,9) + "." : nickname) << std::endl;
 }
+
