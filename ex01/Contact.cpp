@@ -6,12 +6,11 @@
 /*   By: angerard <angerard@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 10:40:07 by angerard          #+#    #+#             */
-/*   Updated: 2025/02/07 17:34:41 by angerard         ###   ########.fr       */
+/*   Updated: 2025/02/08 12:21:50 by angerard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
-#include <iomanip>
+#include "./Contact.hpp"
 
 void Contact::setContact()
 {

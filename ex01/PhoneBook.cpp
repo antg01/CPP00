@@ -6,16 +6,17 @@
 /*   By: angerard <angerard@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 10:39:54 by angerard          #+#    #+#             */
-/*   Updated: 2025/02/07 17:44:34 by angerard         ###   ########.fr       */
+/*   Updated: 2025/02/08 12:53:08 by angerard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#include "./PhoneBook.hpp"
 
 PhoneBook::PhoneBook() : contact_count(0) {}
 
 void PhoneBook::addContact()
 {
+    static int oldest_index = 0;
     if (contact_count < 8)
     {
         contacts[contact_count].setContact();
@@ -23,7 +24,8 @@ void PhoneBook::addContact()
     }
     else
     {
-        contacts[0].setContact();
+        contacts[oldest_index].setContact();
+        oldest_index = (oldest_index + 1) % 8;
     }
 }
 
