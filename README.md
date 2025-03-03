@@ -1,4 +1,103 @@
 # CP00
+# README - Mégaphone & PhoneBook en C++
+
+## Exercice 00 : Mégaphone
+
+### Objectif
+L'objectif de cet exercice est de se familiariser avec la manipulation des arguments en ligne de commande et les flux de sortie en C++.
+
+### Explication de la solution
+Le programme prend des arguments passés lors de son exécution et les affiche en majuscules. S'il n'y a pas d'arguments, un message spécifique est affiché.
+
+### Concepts abordés
+- Utilisation de `argc` et `argv` pour récupérer les arguments de la ligne de commande.
+- Utilisation de `std::toupper()` pour transformer les caractères en majuscules.
+- Manipulation des flux de sortie avec `std::cout`.
+
+---
+
+## Exercice 01 : My Awesome PhoneBook
+
+### Objectif
+Cet exercice a pour but d'introduire la programmation orientée objet en C++ en concevant une application rudimentaire de gestion de contacts.
+
+### Explication de la solution
+Le programme implémente un répertoire de contacts qui permet trois actions principales :
+1. **Ajouter un contact** (`ADD`)
+2. **Rechercher un contact** (`SEARCH`)
+3. **Quitter le programme** (`EXIT`)
+
+Le répertoire peut stocker jusqu'à 8 contacts. Lorsqu'un nouvel enregistrement est ajouté alors que le répertoire est plein, le plus ancien est remplacé.
+
+### Concepts abordés
+#### **Programmation orientée objet (OOP)**
+- **Encapsulation** : Les attributs des contacts sont privés et accédés via des méthodes publiques.
+- **Classes** : Définition de `Contact` et `PhoneBook` pour structurer les données et les comportements.
+- **Attributs et méthodes** : Définition des variables d'instance et des méthodes associées.
+
+#### **Gestion des entrées/sorties**
+- Utilisation de `std::cin` pour la saisie utilisateur.
+- Utilisation de `std::setw()` pour formater l'affichage des contacts.
+- Manipulation de `std::string` pour gérer et tronquer les données affichées.
+
+#### **Gestion des erreurs et validation**
+- Vérification des entrées pour empêcher la saisie de champs vides.
+- Gestion des erreurs de format avec `std::cin.fail()`.
+
+### Fonctionnalités principales
+- **Ajout de contacts** : Saisie des informations via `std::cin`.
+- **Affichage des contacts** : Liste formatée avec alignement et troncature.
+- **Recherche d'un contact** : Accès aux détails d'un contact en saisissant un index valide.
+- **Gestion des commandes invalides** : Messages d'erreur si la commande ou l'index sont incorrects.
+
+---
+
+## Compilation et Exécution
+### Mégaphone
+Compilation :
+```bash
+make
+```
+Exécution :
+```bash
+./megaphone "message ici"
+```
+
+### PhoneBook
+Compilation :
+```bash
+make
+```
+Exécution :
+```bash
+./phonebook
+```
+
+### Commandes disponibles dans PhoneBook
+- `ADD` : Ajouter un contact.
+- `SEARCH` : Afficher la liste des contacts et consulter un contact.
+- `EXIT` : Quitter le programme.
+
+---
+
+## Améliorations possibles
+- Utiliser des flux `getline()` pour accepter des entrées avec espaces.
+- Implémenter une vérification plus robuste des entrées utilisateur.
+- Ajouter des couleurs pour améliorer l'affichage dans le terminal.
+- Sauvegarder les contacts dans un fichier pour les conserver entre les exécutions.
+
+---
+
+## Conclusion
+Ces exercices introduisent des concepts fondamentaux du C++ :
+- Gestion des entrées/sorties,
+- Manipulation des chaînes de caractères,
+- Programmation orientée objet,
+- Gestion des erreurs et validation des entrées.
+
+Ils constituent une excellente introduction à la logique et à la structure des applications en C++.
+
+
 
 ### 🚀 **C++98 Essentials Summary (for a C Programmer)**
 
