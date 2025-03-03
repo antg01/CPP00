@@ -97,7 +97,7 @@ Ces exercices introduisent des concepts fondamentaux du C++ :
 
 Ils constituent une excellente introduction à la logique et à la structure des applications en C++.
 
-
+---
 
 ### 🚀 **C++98 Essentials Summary (for a C Programmer)**
 
