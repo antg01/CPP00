@@ -6,7 +6,7 @@
 /*   By: angerard <angerard@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 10:30:41 by angerard          #+#    #+#             */
-/*   Updated: 2025/02/08 12:24:14 by angerard         ###   ########.fr       */
+/*   Updated: 2025/04/11 13:53:56 by angerard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include "Contact.hpp"
 #include <istream>
 #include <iomanip>
+#include <csignal>  // pour signal()
+#include <cstdlib>  // pour exit()
 
 class PhoneBook
 {

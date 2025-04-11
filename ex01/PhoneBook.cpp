@@ -6,7 +6,7 @@
 /*   By: angerard <angerard@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 10:39:54 by angerard          #+#    #+#             */
-/*   Updated: 2025/02/08 12:53:08 by angerard         ###   ########.fr       */
+/*   Updated: 2025/04/11 14:00:32 by angerard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ void PhoneBook::searchContact() const
     int index;
     std::cout << "Entre index: ";
     std::cin >> index;
-    if (std::cin.fail() || index < 0 || index >= contact_count) {
+    if (std::cin.fail() || index < 1 || index > contact_count) {
         std::cin.clear();
         std::cin.ignore(1000, '\n');
         std::cout << "Invalid index" << std::endl;
     }
     else {
-        contacts[index].displayContact();
+        contacts[index - 1].displayContact();
     }
 }
 
